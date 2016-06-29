@@ -3,7 +3,7 @@ This is a simple weather-app created as a part of the "The Summer Lovin' NativeS
 A proof of concept on how to create good looking UI with NativeScript in no time.
 
 [![](https://play.google.com/intl/en_us/badges/images/badge_new.png)](https://play.google.com/store/apps/details?id=org.nativescript.fancyweather)
-[![](https://start.flic.io/Get%20Started%20_%20Flic_%20The%20Wireless%20Smart%20Button_files/apple-app-store-badge-3f195ecd9cd15c07f3fb2ff75cb2c022e5216a9e13be6c897c838bc952351fc3.png)](https://itunes.apple.com/us/app/fancy-weather/id1128306233)
+[![](http://www.faithbc.net/wp-content/uploads/2015/10/app-store-badge-small.png)](https://itunes.apple.com/us/app/fancy-weather/id1128306233)
 
 
 ## Usage
