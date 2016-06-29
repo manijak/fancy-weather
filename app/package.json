@@ -1,0 +1,30 @@
+{
+    "name": "fancy-weather",
+    "main": "app.js",
+    "version": "1.0.0",
+    "author": {
+        "name": "Nedim Erkocevic"
+    },
+    "description": "Nativescript Weather-app contest",
+    "license": "Apache-2.0",
+    "keywords": [
+        "telerik",
+        "mobile",
+        "nativescript",
+        "{N}",
+        "weather",
+        "fancy",
+        "manijak"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/manijak/fancy-weather-app.git"
+    },
+    "bugs": {
+        "url": "https://github.com/manijak/fancy-weather-app/issues"
+    },
+    "homepage": "https://github.com/manijak/fancy-weather-app",
+    "android": {
+        "v8Flags": "--expose_gc"
+    }
+}

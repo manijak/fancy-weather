@@ -1,0 +1,5 @@
+<GridLayout class="forcast-font" columns="*" rows="*" horizontalAlignment="center">
+    <Label id="forecast-icon-1" text="{{ hourlyForecastIcon.iconCode1 }}" class="{{ hourlyForecastIcon.iconClass1 }}"  horizontalAlignment="center" />
+    <Label id="forecast-icon-2" text="{{ hourlyForecastIcon.iconCode2 }}" class="{{ hourlyForecastIcon.iconClass2 }}"  horizontalAlignment="center" />
+    <Label id="forecast-icon-3" text="{{ hourlyForecastIcon.iconCode3 }}" class="{{ hourlyForecastIcon.iconClass3 }}"  horizontalAlignment="center" />    
+</GridLayout>

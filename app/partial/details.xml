@@ -1,0 +1,43 @@
+<StackLayout id="detailsWidget" class="init">
+    <StackLayout verticalAlignment="center" class="view-common forecast-details" xmlns:partial="partial">
+        <Label text="Hourly forecast" class="bold details-title" marginTop="8" />
+        <StackLayout height="1" backgroundColor="#40FFFFFF" />
+        <ScrollView orientation="horizontal" marginTop="5">
+            <Repeater items="{{ currentWeather.hourly.data }}">
+                <Repeater.itemsLayout>
+                    <StackLayout orientation="horizontal" />
+                </Repeater.itemsLayout>
+                <Repeater.itemTemplate>
+                    <StackLayout marginRight="10" class="hourly-forecast">
+                        <Label text="{{ time }}" horizontalAlignment="center"/>
+                        <partial:forecast-icon marginTop="4" />
+                        <Label text="{{ temperature }}" horizontalAlignment="center" marginTop="4"/>
+                    </StackLayout>
+
+                </Repeater.itemTemplate>
+            </Repeater> 
+        </ScrollView>
+
+        <Label text="Daily forecast" class="bold details-title" marginTop="10" />
+        <StackLayout height="1" backgroundColor="#40FFFFFF" />
+
+        <ScrollView class="details-daily-scroll">
+            <Repeater items="{{ currentWeather.daily.data }}">
+                <Repeater.itemsLayout>
+                    <StackLayout class="daily-forecast"/>
+                </Repeater.itemsLayout>
+                <Repeater.itemTemplate>
+                    <GridLayout columns="100,*,50,50" rows="auto" marginBottom="6">
+                        <Label text="{{ weekday }}" col="0" />
+                        <partial:forecast-icon col="1" />
+                        <Label text="{{ temperatureMax }}" class="sunset" horizontalAlignment="center" col="2" />
+                        <Label text="{{ temperatureMin }}" class="rain" horizontalAlignment="center" col="3" />
+                    </GridLayout>
+
+                </Repeater.itemTemplate>
+            </Repeater> 
+        </ScrollView>
+
+        <Label text="{{ currentWeather.daily.summary }}" fontSize="12" marginTop="10" textWrap="true" />
+    </StackLayout>
+</StackLayout>

@@ -1,0 +1,75 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="view-common" backgroundSpanUnderStatusBar="true" actionBarHidden="true"
+    xmlns:i="nativescript-image-cache-it">
+    <GridLayout rows="*">
+        <ios>
+            <Image src="~/img/Umag.jpg" stretch="aspectFill" />
+        </ios>
+        <android>
+            <i:ImageCacheIt stretch="aspectFill" centerCrop="false" imageUri="~/img/Umag.jpg"/>
+        </android>
+        <GridLayout rows="auto,*" class="page-info">
+            <GridLayout columns="auto,*,40" rows="40" backgroundColor="#33000000">
+                <Label text="" col="0" width="25"/>
+                <StackLayout col="1" verticalAlignment="center" horizontalAlignment="center">
+                    <Label text="Settings" fontSize="24" class="bold" padding="10,10,10,10" />
+                </StackLayout>
+                <StackLayout col="2" tap="tapBack" verticalAlignment="center" horizontalAlignment="center" height="40" width="40">
+                    <Label text="&#xE86C;" class="md-font" fontSize="30" verticalAlignment="center" horizontalAlignment="center" />
+                </StackLayout>
+            </GridLayout>
+            <StackLayout row="1">
+                <StackLayout ios:margin="10 10 0 10" android:margin="10 0 0 0">
+                    <Label text="Unit settings" android:marginLeft="10" />
+                    <SegmentedBar id="unitBar" selectedIndex="0" margin="5 0 5 0" selectedBackgroundColor="#CCDEEA" 
+                        android:backgroundColor="#CC000000"
+                        selectedIndexChanged="unitSelected">
+                        <SegmentedBar.items>
+                            <SegmentedBarItem title="Metric (C°)" />
+                            <SegmentedBarItem title="Imperial (F°)" />
+                        </SegmentedBar.items>
+                    </SegmentedBar>
+                </StackLayout>
+
+                <StackLayout ios:margin="10 10 0 10" android:margin="10 0 0 0">
+                    <Label text="Time format" android:marginLeft="10" />
+                    <SegmentedBar id="timeBar" selectedIndex="0" margin="5 0 5 0" selectedBackgroundColor="#CCDEEA" 
+                        android:backgroundColor="#CC000000" 
+                        selectedIndexChanged="timeFormatSelected">
+                        <SegmentedBar.items>
+                            <SegmentedBarItem title="24-hour" />
+                            <SegmentedBarItem title="12-hour" />
+                        </SegmentedBar.items>
+                    </SegmentedBar>
+                </StackLayout>
+
+                 <StackLayout margin="20 5 0 5" tap="">
+                    <ios>
+                        <Image src="~/img/NativeScript_logo.png" stretch="aspectFit" height="60" margin="10 0 5 0" />
+                    </ios>
+                    <android>
+                        <i:ImageCacheIt centerCrop="false" imageUri="~/img/NativeScript_logo.png" height="60" margin="10 0 5 0"/>
+                    </android>
+                    <Label text="nativescript.org" textWrap="true" style="text-align:center;" class="bold" fontSize="11" />
+                </StackLayout>
+
+                <StackLayout margin="20 10 0 10" style="font-size:14;text-align:center;">
+                    <Label text="This app was developed using NativeScript" class="bold" />
+                    <Label text="Weather forecast data by 'Forecast.io''" marginTop="30" />
+                    <Label text="Location images from 'Flickr''" />
+                    <Label text="Location data from 'Google''" />
+                </StackLayout>
+                
+                <StackLayout margin="10 10 0 10"  height="100%" verticalAlignment="center">
+                    <Label text="Developed by: Nedim Erkočević" class="signature" />
+                </StackLayout>
+
+            </StackLayout>
+        </GridLayout>
+        <StackLayout class="spinner-container" id="spinner" opacity="0">
+            <StackLayout horizontalAlignment="center" verticalAlignment="center" height="100%" width="100%">
+                <ActivityIndicator id="indicator" />
+                <Label text="Loading..." class="bold" fontSize="26" horizontalAlignment="center" verticalAlignment="center" />    
+            </StackLayout>
+        </StackLayout>
+    </GridLayout>
+</Page>

@@ -1,0 +1,8 @@
+<GridLayout columns="auto,*,auto" color="#FFFFFF" padding="5,10,0,10">
+    <Label text="&#xE8B8;" class="md-font" fontSize="25" col="0" horizontalAlignment="left" tap="showSettings"/>
+    <StackLayout horizontalAlignment="center" col="1">
+        <Label text="{{ currentLocation.city }}" color="#FFFFFF" fontSize="16" textWrap="true" horizontalAlignment="center" />
+        <Label text="{{ currentLocation.country }}" color="#FFFFFF" fontSize="12" textWrap="true" horizontalAlignment="center" />
+    </StackLayout>
+    <Label text="&#xE8B6;" class="md-font" fontSize="25" col="2" horizontalAlignment="right" tap="toggleDrawer"/>
+</GridLayout>

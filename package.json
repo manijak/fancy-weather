@@ -1,0 +1,23 @@
+{
+	"name": "fancy-weather",
+	"description": "Fancy Weather App",
+	"license": "APACHE 2.0",
+	"readme": "Fancy Weather App",
+	"repository": "https://github.com/manijak/fancy-weather",
+	"nativescript": {
+		"id": "org.nativescript.fancyweather",
+		"tns-ios": {
+			"version": "2.0.1"
+		},
+		"tns-android": {
+			"version": "2.0.0"
+		}
+	},
+	"dependencies": {
+		"nativescript-image-cache-it": "^1.5.0",
+		"nativescript-pulltorefresh": "^1.1.4",
+		"nativescript-status-bar": "^1.0.1",
+		"nativescript-telerik-ui": "^1.1.1",
+		"tns-core-modules": "2.0.1"
+	}
+}

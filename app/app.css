@@ -1,0 +1,201 @@
+﻿ActionBar{
+    background-color: transparent;
+    color:#FFFFFF;
+}
+Label{
+    vertical-align: middle;
+}
+ActivityIndicator {
+    vertical-align: top;
+}
+.spinner-container{
+    background-color: #CC285681;
+    color:white;
+}
+.menu-title{
+    color:#EAEDEE;
+    font-size:12;
+    text-align: center;
+    width:100%;
+    height: 20;
+    border-radius: 3;
+    background-color:#60FFFFFF;
+}
+.drawer-bg{
+    background-color: #E6000000;
+}
+.view-common {
+    /*font-family: AppleSDGothicNeo-Light,"AppleSDGothicNeo-Light";*/
+    font-family: "Exo2-Light";
+    color:#FFFFFF;
+    font-size:16;
+}
+.page-info{
+    color:white;
+    background-color: #99000000;
+}
+.bottom-content{
+    margin-right: 8;
+    margin-bottom:0;
+}
+.bottom-content .forecast-icon{
+    font-size:40;
+}
+.forecast-details{
+    border-radius: 5;
+    border-width: 1;
+    margin: 50 10 0 10;
+    padding: 0 10 5 10;
+    background-color: #B5000000;
+    border-color: #33A7ADBA;
+}
+.details-daily-scroll{
+    height: 190;
+    margin-top:5;
+}
+.hourly-forecast{
+    font-size: 11;
+}
+.daily-forecast{
+    font-size: 16;
+}
+.hourly-forecast #forecast-icon-1,
+.hourly-forecast #forecast-icon-2,
+.hourly-forecast #forecast-icon-3{
+    font-size: 20;
+}
+.daily-forecast #forecast-icon-1,
+.daily-forecast #forecast-icon-2,
+.daily-forecast #forecast-icon-3{
+    font-size: 30;
+}
+
+
+
+.bold{
+    /*font-family: "AppleSDGothicNeo-SemiBold";*/
+    font-family: "Exo2-Regular";
+}
+.thin{
+    font-family: "Exo2-Thin";
+}
+.top-layout{
+    background-image: url('~/img/gradient_grey_flip.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.bottom-layout{
+    background-image: url('~/img/bg_gradient.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+/******** Current Weather *************/
+.temp{
+    color:white;
+    font-size: 95;
+    font-family: "Exo2-Thin";
+    vertical-align: top;
+    height: 100%;
+}
+.degree{
+    font-size: 80;
+}
+.current-details{
+    font-size:16;
+    height: 100%;
+}
+.summary-label{
+    font-size: 16;
+}
+.details-title{
+    font-size:13;
+    margin-bottom:2;
+}
+.md-font{ 
+    font-family: MaterialIcons-Regular,"Material Icons","MaterialIcons-Regular";
+ }
+.w-font{ 
+    font-family: weathericons-regular-webfont,"Weather Icons","weathericons-regular-webfont";
+ }
+.forcast-font{ 
+    font-family: iconvault_forecastfont,"iconvault","iconvault_forecastfont";
+    font-weight: normal;
+    font-style: normal;
+ }
+
+ .signature{
+     /*font-family: "AvenirNext-Regular",'Josefin Sans';*/
+     font-size:10;
+     text-align:center;
+ }
+
+
+
+.cloud{
+    color: #CCCCCC;
+}
+.cloud-dark{
+    color: #000000;
+}
+.rain{
+    color: #82b2e4;
+}
+.snow{
+    color: #acd3f3;
+}
+.sun{
+    color: #FFA500;
+}
+.sunset{
+    color:#f96f23;
+}
+.moon{
+    color: #FFA500;
+}
+.thunder{
+    color: #FFA500;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+@keyframes fadeslidein {
+    from{ opacity: 0; transform: translateY(250); }
+    to{ opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeslideout {
+    from{ opacity: 1; transform: translateY(0); }
+    to{ opacity: 0; transform: translateY(250); }
+}
+.init{
+    opacity: 0;
+}
+.fade-in{
+    animation-name: fadein;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+.fade-out{
+    animation-name: fadeout;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.fade-slide-in{
+    animation-name: fadeslidein;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.fade-slide-out{
+    animation-name: fadeslideout;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}

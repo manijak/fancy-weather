@@ -1,0 +1,38 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:drawer="nativescript-telerik-ui/sidedrawer" xmlns:PullRefresh="nativescript-pulltorefresh"
+    xmlns:partial="partial" xmlns:i="nativescript-image-cache-it"
+    loaded="loaded" class="view-common" backgroundSpanUnderStatusBar="true" actionBarHidden="true">
+
+    <drawer:RadSideDrawer id="sideDrawer" drawerLocation="Right">
+        <drawer:SideDrawer.drawerTransition>
+                <drawer:SlideInOnTopTransition />
+        </drawer:SideDrawer.drawerTransition>
+        <drawer:RadSideDrawer.drawerContent>
+            <partial:drawer-menu />
+        </drawer:RadSideDrawer.drawerContent>
+        <drawer:RadSideDrawer.mainContent>
+            <GridLayout rows="*">
+                <ios>
+                    <Image src="~/img/Umag.jpg" stretch="aspectFill" />
+                    <Image id="imgWeather" src="{{ bgWeatherImage }}" stretch="aspectFill" class="{{ imgWeatherClass }}" />
+                    <Image id="imgLocation" src="{{ bgLocationImage }}" stretch="aspectFill" class="{{ imgLocationClass }}" />
+                </ios>
+                <android>
+                    <i:ImageCacheIt stretch="aspectFill" centerCrop="false" placeHolder="~/img/Umag.jpg" errorHolder="{{ bgWeatherImage }}" imageUri="{{ bgLocationImage }}" />
+                </android>
+                <StackLayout height="20%" class="top-layout" verticalAlignment="top" />
+                <StackLayout height="38%" class="bottom-layout" verticalAlignment="bottom" />
+                <GridLayout rows="auto,*">
+                    <partial:header />
+                    <PullRefresh:PullToRefresh refresh="{{ refreshView }}" refreshing="{{ refreshing }}" iod:color="#FFFFFF" android:color="#000000" height="100%" row="1">
+                    <ScrollView>
+                        <DockLayout stretchLastChild="false">
+                            <partial:details dock="top" />
+                            <partial:current dock="bottom" />
+                        </DockLayout>
+                    </ScrollView>
+                    </PullRefresh:PullToRefresh>    
+                </GridLayout>
+            </GridLayout>
+        </drawer:RadSideDrawer.mainContent>
+    </drawer:RadSideDrawer>
+</Page>
