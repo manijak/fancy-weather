@@ -1,4 +1,4 @@
-# Fancy Weather App
+# Fancy NativeScript Weather App
 This is a simple weather-app created as a part of the "The Summer Lovin' NativeScript Weather App Ultimate Challenge". 
 A proof of concept on how to create good looking UI with NativeScript in no time.
 
