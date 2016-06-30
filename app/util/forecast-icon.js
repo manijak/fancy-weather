@@ -30,7 +30,7 @@ exports.getForecastIcon = function(conditionCode){
             return forecastIcon;
         case "wind":
             forecastIcon.iconCode1 = "\uf105";
-            forecastIcon.iconCode2 = "\f115";
+            forecastIcon.iconCode2 = "\uf115";
             forecastIcon.iconClass1 = "cloud";
             forecastIcon.iconClass2 = "cloud";
             return forecastIcon;

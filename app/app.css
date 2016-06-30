@@ -13,19 +13,15 @@ ActivityIndicator {
     color:white;
 }
 .menu-title{
-    color:#EAEDEE;
-    font-size:12;
+    font-size:14;
     text-align: center;
     width:100%;
-    height: 20;
-    border-radius: 3;
-    background-color:#60FFFFFF;
+    color:#E6EAEDEE;
 }
 .drawer-bg{
     background-color: #E6000000;
 }
 .view-common {
-    /*font-family: AppleSDGothicNeo-Light,"AppleSDGothicNeo-Light";*/
     font-family: "Exo2-Light";
     color:#FFFFFF;
     font-size:16;
@@ -73,7 +69,6 @@ ActivityIndicator {
 
 
 .bold{
-    /*font-family: "AppleSDGothicNeo-SemiBold";*/
     font-family: "Exo2-Regular";
 }
 .thin{
@@ -98,6 +93,7 @@ ActivityIndicator {
     font-size: 95;
     font-family: "Exo2-Thin";
     vertical-align: top;
+    text-align: right;
     height: 100%;
 }
 .degree{
@@ -127,7 +123,6 @@ ActivityIndicator {
  }
 
  .signature{
-     /*font-family: "AvenirNext-Regular",'Josefin Sans';*/
      font-size:10;
      text-align:center;
  }

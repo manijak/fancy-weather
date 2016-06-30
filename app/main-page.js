@@ -1,3 +1,4 @@
+var observableModule = require("data/observable");
 var ViewModel = require("./main-view-model");
 var frameModule = require("ui/frame");
 var statusBar = require("nativescript-status-bar");
@@ -10,7 +11,7 @@ exports.loaded = function(args){
     statusBar.hide();
     sideDrawer = page.getViewById("sideDrawer");
     searchBar = page.getViewById("searchBar");
-
+    
     if (frameModule.topmost().ios) {
         searchBar.ios.barStyle = UIBarStyle.Black;
         searchBar.ios.translucent = true;
@@ -30,32 +31,24 @@ exports.loaded = function(args){
     }
 };
 
-var isOpen = false;
+exports.selectLocation = function(args) {
+    page.bindingContext.selectLocation(args);
+    sideDrawer.closeDrawer();
+    page.focus();
+};
+exports.selectLastLocation = function(args) {
+    page.bindingContext.selectLastUsedLocation(args);
+    sideDrawer.closeDrawer();
+    page.focus();
+};
+
 exports.showDetails = function(args){
     var detailsWidget = page.getViewById("detailsWidget");
     if(detailsWidget.className === "fade-slide-in")
         detailsWidget.className = "fade-slide-out";
     else
         detailsWidget.className = "fade-slide-in";
-
-    console.log(detailsWidget.className);
-    /*if(isOpen){
-        isOpen = false;
-        detailsWidget.animate({
-            translate: { x: 0, y: 250},
-            opacity: 0,
-            duration: 1000
-        });
-    }else{
-        isOpen=true;
-        detailsWidget.animate({
-            translate: { x: 0, y: 0},
-            opacity: 1,
-            duration: 1000
-        });
-    }*/
-}
-
+};
 
 exports.toggleDrawer = function(args) {
     sideDrawer.toggleDrawerState();
@@ -63,25 +56,15 @@ exports.toggleDrawer = function(args) {
 
 exports.showSettings = function(args) {
     var topmost = frameModule.topmost();
-    
-     if (frameModule.topmost().ios) {
-        var navigationEntry = {
-            moduleName: "info-page",
-            animated:true,
-            transition: {
-                name: "fade",
-                duration: 600
-            }
-        };
-        topmost.navigate(navigationEntry);
-     }
-     else{
-         var navigationEntry = {
-            moduleName: "info-page",
-            animated:false
-        };
-        topmost.navigate(navigationEntry);
-     }
+    var navigationEntry = {
+        moduleName: "info-page",
+        animated:true,
+        transition: {
+            name: "fade",
+            duration: 600
+        }
+    };
+    topmost.navigate(navigationEntry);
 };
 
 exports.onItemLoading = function(args) {

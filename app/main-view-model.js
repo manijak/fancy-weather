@@ -119,6 +119,7 @@ function createViewModel() {
     viewModel.imgLocationClass = "fade-out";
     viewModel.imgWeatherClass = "fade-out";
     viewModel.weatherIcon = "clear-day";
+    viewModel.showDrawer = false;
     viewModel.forecastIcon = ForecastModule.getForecastIcon("default");
     viewModel.currentLocation = helper.newLocation();
     viewModel.lastUsedLocations = getLastUsed();
@@ -158,7 +159,8 @@ function createViewModel() {
         curItem.lng = locationItem.geometry.location.lng;
         this.addToLastUsed(curItem);
         this.set("currentLocation", curItem);
-
+        this.set("showDrawer", false);
+        
         fetchWeather(this);
         fetchImage(this);
     }
@@ -167,6 +169,8 @@ function createViewModel() {
     viewModel.selectLastUsedLocation = function(args) {
         var listItem = this.lastUsedLocations.getItem(args.index);
         this.set("currentLocation", listItem);
+        
+        this.set("showDrawer", false);
         fetchWeather(this);
         fetchImage(this);
 

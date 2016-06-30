@@ -13,7 +13,6 @@
                         <partial:forecast-icon marginTop="4" />
                         <Label text="{{ temperature }}" horizontalAlignment="center" marginTop="4"/>
                     </StackLayout>
-
                 </Repeater.itemTemplate>
             </Repeater> 
         </ScrollView>
@@ -33,11 +32,9 @@
                         <Label text="{{ temperatureMax }}" class="sunset" horizontalAlignment="center" col="2" />
                         <Label text="{{ temperatureMin }}" class="rain" horizontalAlignment="center" col="3" />
                     </GridLayout>
-
                 </Repeater.itemTemplate>
             </Repeater> 
         </ScrollView>
-
         <Label text="{{ currentWeather.daily.summary }}" fontSize="12" marginTop="10" textWrap="true" />
     </StackLayout>
 </StackLayout>

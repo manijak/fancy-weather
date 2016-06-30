@@ -15,26 +15,26 @@
        
         <StackLayout marginLeft="5" col="0" class="current-details" verticalAlignment="center">
             <GridLayout columns="30,70,30,*" horizontalAlignment="left" marginBottom="4">
-                <Label text="&#xf053;" class="w-font" col="0" horizontalAlignment="center"/>
-                <Label text="&#xf054;" class="w-font rain" col="0" horizontalAlignment="center"/>
-                <Label text="{{ currentWeather.daily.data[0].temperatureMin }}" col="1"/>
+                <Label text="&#xf053;" class="w-font" horizontalAlignment="center"/>
+                <Label text="&#xf054;" class="w-font rain" horizontalAlignment="center"/>
+                <Label text="{{ currentWeather.daily.data[0].temperatureMin }}" horizontalAlignment="left" col="1" />
                 <Label text="&#xf053;" class="w-font" col="2" horizontalAlignment="center"/>
                 <Label text="&#xf054;" class="w-font sunset" col="2" horizontalAlignment="center"/>
-                <Label text="{{ currentWeather.daily.data[0].temperatureMax }}" col="3" />
+                <Label text="{{ currentWeather.daily.data[0].temperatureMax }}" horizontalAlignment="left" col="3" />
             </GridLayout>
 
             <GridLayout columns="30,70,30,*" horizontalAlignment="left" marginBottom="4">
-                <Label text="&#xf07a;" class="w-font snow" col="0" horizontalAlignment="center"/>
-                <Label text="{{ currentWeather.currently.humidity }}" col="1"/>
+                <Label text="&#xf07a;" class="w-font snow" horizontalAlignment="center"/>
+                <Label text="{{ currentWeather.currently.humidity }}" horizontalAlignment="left" col="1"/>
                 <Label text="&#xf050;" class="w-font cloud" col="2" horizontalAlignment="center"/>
-                <Label text="{{ currentWeather.currently.windSpeed }}" col="3" />
+                <Label text="{{ currentWeather.currently.windSpeed }}" horizontalAlignment="left" col="3" />
             </GridLayout>
 
             <GridLayout columns="30,70,30,*" horizontalAlignment="left">
-                <Label text="&#xf051;" class="w-font sun" col="0" horizontalAlignment="center" marginBottom="0"/>
-                <Label text="{{ currentWeather.daily.data[0].sunriseTime }}" col="1"/>
+                <Label text="&#xf051;" class="w-font sun" horizontalAlignment="center" marginBottom="0"/>
+                <Label text="{{ currentWeather.daily.data[0].sunriseTime }}" horizontalAlignment="left" col="1"/>
                 <Label text="&#xf052;" class="w-font sunset" col="2" horizontalAlignment="center" marginBottom="0"/>
-                <Label text="{{ currentWeather.daily.data[0].sunsetTime }}" col="3" />
+                <Label text="{{ currentWeather.daily.data[0].sunsetTime }}" horizontalAlignment="left" col="3" />
             </GridLayout>
         </StackLayout>
     </GridLayout>

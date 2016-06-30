@@ -1,23 +1,29 @@
 {
-	"name": "fancy-weather",
-	"description": "Fancy Weather App",
-	"license": "APACHE 2.0",
-	"readme": "Fancy Weather App",
-	"repository": "https://github.com/manijak/fancy-weather",
-	"nativescript": {
-		"id": "org.nativescript.fancyweather",
-		"tns-ios": {
-			"version": "2.0.1"
-		},
-		"tns-android": {
-			"version": "2.0.0"
-		}
-	},
-	"dependencies": {
-		"nativescript-image-cache-it": "^1.5.0",
-		"nativescript-pulltorefresh": "^1.1.4",
-		"nativescript-status-bar": "^1.0.1",
-		"nativescript-telerik-ui": "^1.1.1",
-		"tns-core-modules": "2.0.1"
-	}
+  "name": "fancy-weather",
+  "description": "Fancy Weather App",
+  "license": "APACHE 2.0",
+  "readme": "Fancy Weather App",
+  "repository": "https://github.com/manijak/fancy-weather",
+  "nativescript": {
+    "id": "org.nativescript.fancyweather",
+    "tns-android": {
+      "version": "2.1.1"
+    },
+    "tns-ios": {
+      "version": "2.1.0"
+    }
+  },
+  "dependencies": {
+    "nativescript-image-cache-it": "^1.5.0",
+    "nativescript-pulltorefresh": "^1.1.4",
+    "nativescript-status-bar": "^1.0.1",
+    "nativescript-telerik-ui": "^1.2.0",
+    "tns-core-modules": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-traverse": "6.10.4",
+    "babel-types": "6.11.1",
+    "babylon": "6.8.2",
+    "lazy": "1.0.11"
+  }
 }

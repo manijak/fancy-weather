@@ -1,7 +1,6 @@
 var application = require("application");
 var platform = require("platform");
 
-
 var deviceScreenHeight = platform.screen.mainScreen.heightPixels;
 var deviceScreenWidth = platform.screen.mainScreen.widthPixels;
 console.log(deviceScreenWidth);

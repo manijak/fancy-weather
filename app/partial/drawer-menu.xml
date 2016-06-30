@@ -1,26 +1,30 @@
 <StackLayout android:class="drawer-bg">
     <GridLayout rows="auto,*" height="50%" id="searchLayout">
-        <SearchBar id="searchBar" hint="Search location" text="{{ searchText }}" fontSize="18" submit="{{ searchLocation }}" textFieldHintColor="white"/>
-        <ListView items="{{ searchResults }}" itemLoading="onItemLoading" itemTap="{{ selectLocation }}" row="1" margin="0,8,0,8"
+        <SearchBar id="searchBar" hint="Search location" text="{{ searchText }}" fontSize="20" submit="{{ searchLocation }}" textFieldHintColor="#FFFFFF"/>
+        <ListView items="{{ searchResults }}" itemLoading="onItemLoading" itemTap="selectLocation" row="1" margin="0,8,0,8"
             backgroundColor="transparent" separatorColor="transparent">
             <ListView.itemTemplate>
-                <GridLayout columns="auto,*" margin="2,0,5,0">
-                    <Label text="&#xE567;" class="md-font" fontSize="14" col="0" marginBottom="2"/>
-                    <Label text="{{ formatted_address }}" fontSize="16" col="1" marginLeft="3"/>    
-                </GridLayout>
-                
+                <StackLayout>
+                    <GridLayout columns="auto,*" margin="2,0,8,0">
+                        <Label text="&#xE567;" class="md-font" fontSize="16" col="0" marginBottom="2"/>
+                        <Label text="{{ formatted_address }}" fontSize="16" col="1" marginLeft="3"/>    
+                    </GridLayout>
+                </StackLayout>
             </ListView.itemTemplate>
         </ListView>
     </GridLayout>
-    <GridLayout rows="auto,*" height="50%" padding="10,8,0,8">
-        <Label text="Last visited" textWrap="true" horizontalAlignment="center" class="menu-title" fontSize="14"/>
-        <ListView items="{{ lastUsedLocations }}" itemLoading="onItemLoading" itemTap="{{ selectLastUsedLocation }}" row="1" marginTop="5"
+    <GridLayout rows="auto,auto,*" height="50%" padding="10,8,0,8">
+        <StackLayout height="1" backgroundColor="#30FFFFFF" />
+        <Label text="Last visited" horizontalAlignment="center" class="menu-title" marginTop="5" row="1"/>
+        <ListView items="{{ lastUsedLocations }}" itemLoading="onItemLoading" itemTap="selectLastLocation" row="2" marginTop="5"
             backgroundColor="transparent" separatorColor="transparent">
             <ListView.itemTemplate>
-                <GridLayout columns="auto,*" margin="2,0,5,0">
-                    <Label text="&#xE55F;" class="md-font" fontSize="14" col="0" marginBottom="2"/>
-                    <Label text="{{ city + ', ' + country }}" fontSize="16" col="1" marginLeft="3"/>    
-                </GridLayout>
+                <StackLayout>
+                    <GridLayout columns="auto,*" margin="2,0,8,0">
+                        <Label text="&#xE55F;" class="md-font" fontSize="16" col="0" marginBottom="2"/>
+                        <Label text="{{ city + ', ' + country }}" fontSize="16" col="1" marginLeft="3"/>    
+                    </GridLayout>    
+                </StackLayout>
             </ListView.itemTemplate>
         </ListView>
     </GridLayout>
